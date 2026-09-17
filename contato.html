@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar visita | Roteiro dos Estádios</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a class="navbar-brand" href="inicio.html">Roteiro dos Estádios</a>
+      <div class="nav-links">
+        <a href="inicio.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="estadios.html">Estádios</a>
+        <a class="active" href="contato.html">Agendar visita</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-content container">
+    <p class="eyebrow">Planeje seu passeio</p>
+    <h1>Agende uma visita</h1>
+    <p class="lead">Preencha o formulário para registrar seu interesse. Este formulário é demonstrativo e não envia dados para um servidor.</p>
+    <form class="visit-form" action="#" method="post">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" type="text" required />
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" required />
+      <label for="estadio">Estádio</label>
+      <select id="estadio" name="estadio" required>
+        <option value="">Selecione</option>
+        <option>Neo Química Arena</option>
+        <option>Allianz Parque</option>
+        <option>Morumbis</option>
+      </select>
+      <label for="data">Data desejada</label>
+      <input id="data" name="data" type="date" />
+      <button class="btn-amber" type="submit">Enviar interesse</button>
+    </form>
+  </main>
+
+  <footer><p>Roteiro dos Estádios de São Paulo — projeto de estudo.</p></footer>
+</body>
+</html>
