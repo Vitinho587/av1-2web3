@@ -7,6 +7,66 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+
+    <style>
+        body {
+            background-color: white;
+            color: #19252a;
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+            padding: 20px;
+        }
+
+        /* Estilo do modo noturno */
+        body.dark {
+            background-color: #19252a;
+            color: white;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #19252a;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="botaoTema" onclick="alternarTema()">
+        🌙 Modo noturno
+    </button>
+
+    <script>
+        function alternarTema() {
+            document.body.classList.toggle("dark");
+
+            const botao = document.getElementById("botaoTema");
+
+            if (document.body.classList.contains("dark")) {
+                botao.textContent = "☀️ Modo claro";
+            } else {
+                botao.textContent = "🌙 Modo noturno";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
   <nav class="navbar">
     <div class="container nav-content">
       <a class="navbar-brand" href="inicio.html">Roteiro dos Estádios</a>
@@ -22,7 +82,7 @@
   <main class="page-content container">
     <p class="eyebrow">Planeje seu passeio agora!</p>
     <h1>Agende uma visita</h1>
-    <p class="lead">Preencha o formulário para registrar seu interesse. Este formulário é demonstrativo e não envia dados para um servidor.</p>
+    <p class="lead">Preencha o formulário para registrar sua viagem para o estádio.</p>
     <form class="visit-form" action="#" method="post">
       <label for="nome">Nome</label>
       <input id="nome" name="nome" type="text" required />
@@ -32,8 +92,14 @@
       <select id="estadio" name="estadio" required>
         <option value="">Selecione</option>
         <option>Neo Química Arena</option>
-        <option>Allianz Parque</option>
-        <option>Morumbis</option>
+        <option>Nubank Parque</option>
+        <option>MorumBIS</option>
+        <option>Urbano Caldeira (Vila Belmiro)</option>
+        <option>Moisés Lucarelli</option>
+        <option>Brinco de Ouro da Princesa</option>
+        <option>Conde Rodolfo Crespi (Rua Javari)</option>
+        <option>Bruno José Daniel (Brunão)</option>
+        <option>Paulo Machado de Carvalho (Pacaembu)</option>
       </select>
       <label for="data">Data desejada</label>
       <input id="data" name="data" type="date" />
@@ -41,6 +107,6 @@
     </form>
   </main>
 
-  <footer><p>Roteiro dos Estádios de São Paulo (projeto de WEB).</p></footer>
+  <footer><p>Roteiro dos Estádios do estado de São Paulo (projeto WEB).</p></footer>
 </body>
 </html>

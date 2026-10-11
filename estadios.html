@@ -7,6 +7,66 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+
+    <style>
+        body {
+            background-color: white;
+            color: #19252a;
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+            padding: 20px;
+        }
+
+        /* Estilo do modo noturno */
+        body.dark {
+            background-color: #19252a;
+            color: white;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: #19252a;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="botaoTema" onclick="alternarTema()">
+        🌙 Modo noturno
+    </button>
+
+    <script>
+        function alternarTema() {
+            document.body.classList.toggle("dark");
+
+            const botao = document.getElementById("botaoTema");
+
+            if (document.body.classList.contains("dark")) {
+                botao.textContent = "☀️ Modo claro";
+            } else {
+                botao.textContent = "🌙 Modo noturno";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
   <nav class="navbar">
     <div class="container nav-content">
       <a class="navbar-brand" href="inicio.html">Roteiro dos Estádios</a>
@@ -21,11 +81,54 @@
 
   <main class="page-content container">
     <p class="eyebrow">Escolha seu destino!</p>
-    <h1>Estádios para visitar em SP</h1>
+    <h1>Um pouco das histórias dos estádios</h1>
     <div class="stadium-list">
-      <article class="stadium-item"><span class="number">01</span><div><h2>Neo Química Arena</h2><p>Itaquera, zona leste. Tour pelo campo, vestiários e museu do clube.</p></div></article>
-      <article class="stadium-item"><span class="number">02</span><div><h2>Nubank Parque</h2><p>Barra Funda, zona oeste. Uma experiência pelos bastidores de uma arena moderna.</p></div></article>
-      <article class="stadium-item"><span class="number">03</span><div><h2>Morumbis</h2><p>Morumbi, zona sul. História, arquibancadas e a grandiosidade de um dos maiores estádios do país.</p></div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://upload.wikimedia.org/wikipedia/pt/b/b4/Corinthians_simbolo.png?utm_source=pt.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"
+     alt="Escudo do Corinthians"
+     width="100">
+</span><div><h2>Neo Química Arena</h2><p>Itaquera, zona leste.</p>A história da Neo Química Arena começou em 2010, quando o Corinthians anunciou seu estádio próprio em Itaquera. Inaugurada em 2014, recebeu a abertura da Copa do Mundo daquele ano. Em 2020, ganhou o nome atual. Hoje, é símbolo da paixão da Fiel e palco de grandes conquistas do Timão.</div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Palmeiras_logo.svg/500px-Palmeiras_logo.svg.png?utm_source=pt.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail"
+     alt="Escudo do Palmeiras"
+     width="100">
+</span><div><h2>Nubank Parque</h2><p>Barra Funda, zona oeste.</p>A história do Nubank Parque começou em 2010, quando o antigo Palestra Itália foi fechado para dar lugar a uma arena moderna. Inaugurado em 2014, tornou-se a casa do Palmeiras, palco de grandes jogos e conquistas.</div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://img.olympics.com/images/image/private//t_s_w440/f_auto/primary/gulnkiaq0o9z9khv1126"
+     alt="Símbolo do São Paulo Futebol Clube"
+     width="100">
+
+</span><div><h2>MorumBIS</h2><p>Morumbi, zona sul.</p>A história do Morumbis começou em 1952, quando o São Paulo iniciou a construção de seu estádio no bairro do Morumbi. Inaugurado oficialmente em 1970, tornou-se palco de grandes conquistas do Tricolor e um dos estádios mais tradicionais do futebol brasileiro. Em 2024, passou a se chamar MorumBIS.</div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Santos_Logo.png/500px-Santos_Logo.png?utm_source=pt.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail"
+     alt="Escudo do Santos FC"
+     width="100">
+</span><div><h2>Vila Belmiro</h2><p>Santos.</p>A história do Urbano Caldeira começou em 1916, quando o Santos inaugurou seu estádio em Santos, no litoral paulista. Conhecida como casa de Pelé, a Vila foi palco de grandes conquistas nacionais e internacionais e se tornou um símbolo da história do Peixe.</div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_AA_Ponte_Preta.svg/1280px-Logo_AA_Ponte_Preta.svg.png?utm_source=pt.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail"
+     alt="Escudo da Ponte Preta"
+     width="100">
+</span><div><h2>Moisés Lucarelli</h2><p>Campinas.</p>A história do Estádio Moisés Lucarelli começou em 1948, quando a Ponte Preta inaugurou sua casa em Campinas. Construído com a ajuda de torcedores e associados, tornou-se um símbolo da tradição e da paixão alvinegra, sendo conhecido como Majestoso.</div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Guarani_Futebol_Clube_logo.svg/1280px-Guarani_Futebol_Clube_logo.svg.png?utm_source=pt.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail"
+     alt="Escudo do Guarani FC"
+     width="100">
+</span><div><h2>Brinco de Ouro da Princesa</h2><p>Campinas.</p>A história do Brinco de Ouro da Princesa começou em 1953, quando o Guarani inaugurou seu estádio em Campinas. Com o passar dos anos, tornou-se a casa do Bugre e palco de grandes momentos, incluindo o título do Campeonato Brasileiro de 1978.</div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/CA_Juventus_logo.svg/330px-CA_Juventus_logo.svg.png?utm_source=pt.wikipedia.org&amp;utm_campaign=index&amp;utm_content=thumbnail"
+     alt="Escudo do Clube Atlético Juventus"
+     width="100">
+</span><div><h2>Rua Javari</h2><p>zona leste.</p>A história do Estádio Conde Rodolfo Crespi, começou em 1929, quando o Juventus da Mooca inaugurou sua casa na capital paulista. Com arquibancadas tradicionais e clima de futebol raiz, tornou-se símbolo da identidade italiana do bairro e da paixão dos torcedores juventinos.</div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://upload.wikimedia.org/wikipedia/pt/5/50/Santo_Andre_escudo.png?utm_source=pt.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"
+     alt="Escudo do Santo André"
+     width="100">
+</span><div><h2>Brunão</h2><p>Santo André.</p>A história do Estádio Bruno José Daniel começou em 1969, quando foi inaugurado em Santo André, no ABC Paulista. Conhecido como Brunão, tornou-se a casa do Santo André e palco de sua conquista mais histórica, a Copa do Brasil de 2004, quando o clube surpreendeu o Flamengo na final.</div></article>
+      <article class="stadium-item"><span class="number">
+<img src="https://upload.wikimedia.org/wikipedia/pt/6/60/Pacaembu.png?utm_source=pt.wikipedia.org&amp;utm_campaign=index&amp;utm_content=original"
+     alt="Estádio Municipal Paulo Machado de Carvalho - Pacaembu"
+     width="100">
+</span><div><h2>Pacaembu</h2><p>zona oeste.</p>A história do Pacaembu começou em 1940, quando foi inaugurado na cidade de São Paulo. Durante décadas, recebeu grandes jogos e foi a casa de muitos torcedores, especialmente do Corinthians, que em 2012 conquistou a Libertadores contra o Boca Juniors. Em 2024, iniciou uma nova fase após sua modernização, mantendo sua importância histórica para o futebol paulista.</div></article>
     </div>
 
     <section class="stadium-table-section" aria-labelledby="comparativo-estadios">
@@ -38,27 +141,103 @@
               <th scope="col">Estádio</th>
               <th scope="col">Localização</th>
               <th scope="col">Capacidade</th>
-              <th scope="col">Visita</th>
+              <th scope="col">Preço / Inteiro</th>
+              <th scope="col">Preço / Meia</th>
+              <th scope="col">Sócios Torcedores</th>
+              <th scope="col">Gratuito</th>
+              <th scope="col">Dia de Jogo</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">Neo Química Arena</th>
-              <td>Itaquera</td>
+              <td>Itaquera SP</td>
               <td>49.205 pessoas</td>
-              <td>Campo, vestiários e museu</td>
+              <td>2ª,3ª,4ª,6ª R$ 65,00 / 5ª R$ 55,00 / finais de semana ou feriados R$ 95,00</td>
+              <td>2ª,3ª,4ª,6ª R$ 32,50 / 5ª R$ 27,50 / finais de semana ou feriados R$ 47,50</td>
+              <td>20% de desconto (é válido apenas sobre o valor da inteira)</td>
+              <td>Crianças de até 3 anos e aniversariantes da semana</td>
+              <td>durante a semana R$ 95,00 inteira, R$ 47,50 meia / finais de semana ou feriados R$ 120,00 inteira, R$ 60,00 meia</td>
             </tr>
             <tr>
               <th scope="row">Nubank Parque</th>
-              <td>Barra Funda</td>
+              <td>Barra Funda SP</td>
               <td>43.713 pessoas</td>
-              <td>Bastidores da arena</td>
+              <td>R$ 90,00</td>
+              <td>R$45,00</td>
+              <td>R$ 72,00</td>
+              <td>crianças de até 2 anos</td>
+             <td>R$ 150,00 inteira, R$ 75,00 meia</td>
             </tr>
             <tr>
-              <th scope="row">Morumbis</th>
-              <td>Morumbi</td>
+              <th scope="row">MorumBIS</th>
+              <td>Morumbi SP</td>
               <td>66.795 pessoas</td>
-              <td>Arquibancadas e história</td>
+              <td>R$ 80,00</td>
+              <td>R$ 40,00</td>
+              <td>R$ 60,00</td>
+              <td>Crianças de até 5 anos</td>
+              <td>Não muda</td>
+            </tr>
+            <tr>
+              <th scope="row">Urbano Caldeira</th>
+              <td>Santos</td>
+              <td>20.360 pessoas</td>
+              <td>Visita Simples R$ 40,00 / Visita Monitorada R$ 80,00</td>
+              <td>Visita Simples R$ 20,00 / Visita Monitorada R$ 40,00</td>
+              <td>Visita Simples R$ 20,00 / Visita Monitorada R$ 40,00</td>
+              <td>Crianças de até 6 anos</td>
+              <td>Não muda</td>
+            </tr>
+            <tr>
+            <th scope="row">Moisés Lucarelli</th>
+              <td>Campinas</td>
+              <td>19.728 pessoas</td>
+              <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Não há visitação</td>
+            </tr>
+            <tr>
+              <th scope="row">Brinco de Ouro da Princesa</th>
+              <td>Campinas</td>
+              <td>29.130 pessoas</td>
+              <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Não há visitação</td>
+            </tr>
+            <tr>
+              <th scope="row">Conde Rodolfo Crespi</th>
+              <td>Mocca SP</td>
+              <td>5.256 pessoas</td>
+               <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Gratuito</td>
+              <td>Não há visitação</td>
+            </tr>
+            <tr>
+              <th scope="row">Bruno José Daniel</th>
+              <td>Santo André</td>
+              <td>11.440 pessoas</td>
+              <td>R$ 10,00</td>
+              <td>R$ 5,00</td>
+              <td>R$ 5,00</td>
+              <td>crianças de até 6 anos e Pessoas com Deficiência (PcD)</td>
+              <td>Não há visitação</td>
+            </tr>
+            <tr>
+              <th scope="row">Paulo Machado de Carvalho</th>
+              <td>Pacaembu SP</td>
+              <td>26.000 pessoas</td>
+              <td>R$ 60,00</td>
+              <td>R$ 30,00</td>
+              <td>Não tem</td>
+              <td>Crianças de até 3 anos</td>
+              <td>Não há visitação</td>
             </tr>
           </tbody>
         </table>
@@ -66,6 +245,6 @@
     </section>
   </main>
 
-  <footer><p>Roteiro dos Estádios de São Paulo (projeto WEB).</p></footer>
+  <footer><p>Roteiro dos Estádios do estado de São Paulo (projeto WEB).</p></footer>
 </body>
 </html>
