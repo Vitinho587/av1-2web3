@@ -1,112 +1,131 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agendar visita | Roteiro dos Estádios</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu site</title>
 
-    <style>
-        body {
-            background-color: white;
-            color: #19252a;
-            font-family: Arial, sans-serif;
-            transition: 0.3s;
-            padding: 20px;
-        }
+    <title>Agendar visita | Roteiro dos Estádios</title>
 
-        /* Estilo do modo noturno */
-        body.dark {
-            background-color: #19252a;
-            color: white;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Source+Sans+3&display=swap" rel="stylesheet">
 
-        button {
-            padding: 10px 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            background-color: #19252a;
-            color: white;
-            font-size: 16px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <button id="botaoTema" onclick="alternarTema()">
-        🌙 Modo noturno
-    </button>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a class="navbar-brand" href="inicio.html">Roteiro dos Estádios</a>
+
+            <div class="nav-links">
+                <a href="inicio.html">Início</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="estadios.html">Estádios</a>
+                <a class="active" href="contato.html">Agendar visita</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container page-content">
+
+        <h1>Agende sua visita</h1>
+
+        <p>
+            Escolha um estádio, informe seus dados e selecione a data desejada
+            para sua visita.
+        </p>
+
+        <form class="visit-form" id="formVisita">
+
+            <label for="nome">Nome completo</label>
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+            >
+
+            <label for="email">E-mail</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+            <label for="estadio">Escolha o estádio</label>
+            <select id="estadio" name="estadio" required>
+                <option value="">Selecione um estádio</option>
+                <option>Neo Química Arena</option>
+                <option>Nubank Parque</option>
+                <option>MorumBIS</option>
+                <option>Urbano Caldeira</option>
+                <option>Moisés Lucarelli</option>
+                <option>Brinco de Ouro da Princesa</option>
+                <option>Conde Rodolfo Crespi</option>
+                <option>Bruno José Daniel</option>
+                <option>Paulo Machado de Carvalho</option>
+            </select>
+
+            <label for="data">Data desejada</label>
+            <input
+                type="date"
+                id="data"
+                name="data"
+                required
+            >
+
+            <button type="submit" class="btn-amber">
+                Agendar visita
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Roteiro dos Estádios do estado de São Paulo (projeto WEB).</p>
+    </footer>
 
     <script>
-        function alternarTema() {
-            document.body.classList.toggle("dark");
+        const cadastro = document.getElementById("formVisita");
 
-            const botao = document.getElementById("botaoTema");
+        cadastro.addEventListener("submit", function(event) {
 
-            if (document.body.classList.contains("dark")) {
-                botao.textContent = "☀️ Modo claro";
-            } else {
-                botao.textContent = "🌙 Modo noturno";
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const estadio = document.getElementById("estadio").value;
+            const data = document.getElementById("data").value;
+
+            const hoje = new Date();
+            hoje.setHours(0, 0, 0, 0);
+
+            const dataEscolhida = new Date(data + "T00:00:00");
+
+            if (dataEscolhida < hoje) {
+                alert("Escolha uma data válida para sua visita!");
+                return;
             }
-        }
+
+            alert(`Agendamento realizado com sucesso, ${nome}!
+
+Estádio: ${estadio}
+Data: ${data.split("-").reverse().join("/")}
+
+Obrigado por utilizar o Roteiro dos Estádios!`);
+
+            cadastro.reset();
+
+        });
     </script>
+    <script src="JS/index.js"></script>
 
-</body>
-</html>
-
-
-  <nav class="navbar">
-    <div class="container nav-content">
-      <a class="navbar-brand" href="inicio.html">Roteiro dos Estádios</a>
-      <div class="nav-links">
-        <a href="inicio.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="estadios.html">Estádios</a>
-        <a class="active" href="contato.html">Agendar visita</a>
-      </div>
-    </div>
-  </nav>
-
-  <main class="page-content container">
-    <p class="eyebrow">Planeje seu passeio agora!</p>
-    <h1>Agende uma visita</h1>
-    <p class="lead">Preencha o formulário para registrar sua viagem para o estádio.</p>
-    <form class="visit-form" action="#" method="post">
-      <label for="nome">Nome</label>
-      <input id="nome" name="nome" type="text" required />
-      <label for="email">E-mail</label>
-      <input id="email" name="email" type="email" required />
-      <label for="estadio">Estádio</label>
-      <select id="estadio" name="estadio" required>
-        <option value="">Selecione</option>
-        <option>Neo Química Arena</option>
-        <option>Nubank Parque</option>
-        <option>MorumBIS</option>
-        <option>Urbano Caldeira (Vila Belmiro)</option>
-        <option>Moisés Lucarelli</option>
-        <option>Brinco de Ouro da Princesa</option>
-        <option>Conde Rodolfo Crespi (Rua Javari)</option>
-        <option>Bruno José Daniel (Brunão)</option>
-        <option>Paulo Machado de Carvalho (Pacaembu)</option>
-      </select>
-      <label for="data">Data desejada</label>
-      <input id="data" name="data" type="date" />
-      <button class="btn-amber" type="submit">Enviar interesse</button>
-    </form>
-  </main>
-
-  <footer><p>Roteiro dos Estádios do estado de São Paulo (projeto WEB).</p></footer>
 </body>
 </html>

@@ -56,4 +56,5 @@ footer p { margin: 0; }
   .page-content { padding-top: 56px; }
   .content-grid { grid-template-columns: 1fr; }
   .stadium-item { gap: 16px; }
+  
 }
